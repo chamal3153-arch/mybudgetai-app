@@ -2,10 +2,20 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { createServiceClient } from '@/lib/supabase/server'
 
+// Vercel Cron calls GET, manual calls POST
+export async function GET(req: Request) {
+  return handler(req)
+}
+
 export async function POST(req: Request) {
-  // This endpoint is called by a cron job (Vercel Cron or manual trigger)
-  const { authorization } = Object.fromEntries(req.headers)
-  if (authorization !== `Bearer ${process.env.CRON_SECRET}`) {
+  return handler(req)
+}
+
+async function handler(req: Request) {
+  // Accept Vercel cron header OR our own CRON_SECRET
+  const auth = req.headers.get('authorization') || ''
+  const cronSecret = process.env.CRON_SECRET || ''
+  if (auth !== `Bearer ${cronSecret}`) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
