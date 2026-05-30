@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { createServiceClient } from '@/lib/supabase/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
   // This endpoint is called by a cron job (Vercel Cron or manual trigger)
   const { authorization } = Object.fromEntries(req.headers)
@@ -11,6 +9,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY)
   const supabase = await createServiceClient()
 
   // Get all users with reminders enabled and at least one plan
