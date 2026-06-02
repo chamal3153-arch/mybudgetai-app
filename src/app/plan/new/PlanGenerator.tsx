@@ -1,19 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-
-const COUNTRIES = [
-  {name:"United States",currency:"$",code:"USD",flag:"🇺🇸"},{name:"United Kingdom",currency:"£",code:"GBP",flag:"🇬🇧"},
-  {name:"Australia",currency:"A$",code:"AUD",flag:"🇦🇺"},{name:"Canada",currency:"C$",code:"CAD",flag:"🇨🇦"},
-  {name:"India",currency:"₹",code:"INR",flag:"🇮🇳"},{name:"Germany",currency:"€",code:"EUR",flag:"🇩🇪"},
-  {name:"France",currency:"€",code:"EUR",flag:"🇫🇷"},{name:"Brazil",currency:"R$",code:"BRL",flag:"🇧🇷"},
-  {name:"South Africa",currency:"R",code:"ZAR",flag:"🇿🇦"},{name:"Nigeria",currency:"₦",code:"NGN",flag:"🇳🇬"},
-  {name:"Kenya",currency:"KSh",code:"KES",flag:"🇰🇪"},{name:"Singapore",currency:"S$",code:"SGD",flag:"🇸🇬"},
-  {name:"UAE",currency:"AED",code:"AED",flag:"🇦🇪"},{name:"Mexico",currency:"$",code:"MXN",flag:"🇲🇽"},
-  {name:"Philippines",currency:"₱",code:"PHP",flag:"🇵🇭"},{name:"Pakistan",currency:"₨",code:"PKR",flag:"🇵🇰"},
-  {name:"Indonesia",currency:"Rp",code:"IDR",flag:"🇮🇩"},{name:"Japan",currency:"¥",code:"JPY",flag:"🇯🇵"},
-  {name:"China",currency:"¥",code:"CNY",flag:"🇨🇳"},{name:"South Korea",currency:"₩",code:"KRW",flag:"🇰🇷"},
-]
+import { COUNTRIES } from '@/lib/countries'
 
 const GOALS = [
   {id:'Emergency Fund',emoji:'🛡️'},{id:'Grow Wealth',emoji:'📈'},{id:'Buy a Home',emoji:'🏠'},
