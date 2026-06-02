@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
-import { LayoutDashboard, Settings, LogOut, Plus } from 'lucide-react'
+import { LayoutDashboard, Settings, LogOut, Plus, Calculator } from 'lucide-react'
 
 export default function Navbar({ user }: { user: { email?: string } | null }) {
   const pathname = usePathname()
@@ -118,6 +118,9 @@ export default function Navbar({ user }: { user: { email?: string } | null }) {
               </Link>
               <Link href="/dashboard" className={`nav-link${pathname === '/dashboard' ? ' active' : ''}`}>
                 <LayoutDashboard size={15} /> Dashboard
+              </Link>
+              <Link href="/calculators" className={`nav-link${pathname === '/calculators' ? ' active' : ''}`}>
+                <Calculator size={15} /> Calculators
               </Link>
               <Link href="/settings" className={`nav-link${pathname === '/settings' ? ' active' : ''}`}>
                 <Settings size={15} /> Settings
