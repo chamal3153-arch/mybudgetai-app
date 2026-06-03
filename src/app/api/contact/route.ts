@@ -1,3 +1,4 @@
+﻿export const runtime = 'edge'
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
@@ -11,7 +12,7 @@ export async function POST(req: Request) {
     from: 'MyBudget.AI Contact <noreply@costsaverai.com>',
     to: 'support@costsaverai.com',
     replyTo: email,
-    subject: `[MyBudget.AI] ${subject} — from ${name}`,
+    subject: `[MyBudget.AI] ${subject} â€” from ${name}`,
     html: `
       <div style="font-family:sans-serif;max-width:560px;margin:0 auto;">
         <h2 style="color:#c8f060;">New contact form submission</h2>
@@ -29,7 +30,7 @@ export async function POST(req: Request) {
   await resend.emails.send({
     from: 'MyBudget.AI <support@costsaverai.com>',
     to: email,
-    subject: `We received your message — MyBudget.AI`,
+    subject: `We received your message â€” MyBudget.AI`,
     html: `
       <div style="font-family:sans-serif;max-width:560px;margin:0 auto;background:#09090b;color:#e4e4e7;padding:32px 24px;border-radius:12px;">
         <h2 style="color:#c8f060;margin-bottom:4px;">MyBudget.AI</h2>
@@ -38,10 +39,11 @@ export async function POST(req: Request) {
         <p style="color:#71717a;font-size:14px;line-height:1.6;">We'll get back to you within 24 hours. Your subject was: <strong style="color:#e4e4e7;">${subject}</strong></p>
         <hr style="border-color:rgba(255,255,255,0.06);margin:24px 0;"/>
         <p style="font-size:13px;color:#71717a;">While you wait, explore your dashboard or try our free financial calculators at <a href="https://mybudgetai-v2.vercel.app/calculators" style="color:#c8f060;">mybudget.ai/calculators</a></p>
-        <p style="font-size:12px;color:#52525b;margin-top:20px;">CostSaver AI · <a href="https://costsaverai.com" style="color:#52525b;">costsaverai.com</a></p>
+        <p style="font-size:12px;color:#52525b;margin-top:20px;">CostSaver AI Â· <a href="https://costsaverai.com" style="color:#52525b;">costsaverai.com</a></p>
       </div>
     `
   })
 
   return NextResponse.json({ ok: true })
 }
+

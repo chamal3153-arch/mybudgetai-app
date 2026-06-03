@@ -1,3 +1,4 @@
+﻿export const runtime = 'edge'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 import CalculatorsClient from './CalculatorsClient'
@@ -17,3 +18,4 @@ export default async function CalculatorsPage() {
     </>
   )
 }
+

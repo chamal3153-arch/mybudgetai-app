@@ -1,10 +1,11 @@
+﻿export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
   title: 'Privacy Policy | MyBudget.AI',
-  description: 'Privacy Policy for MyBudget.AI — how we collect, use and protect your data.',
+  description: 'Privacy Policy for MyBudget.AI â€” how we collect, use and protect your data.',
 }
 
 export default async function PrivacyPage() {
@@ -27,25 +28,25 @@ export default async function PrivacyPage() {
           {
             title: '1. Information We Collect',
             content: `We collect information you provide directly:
-• Account information: email address and password when you sign up
-• Financial information: income, expenses, savings, debt and goals you enter to generate your plan
-• Usage data: pages visited, plans generated, features used
-• Payment information: processed securely by Stripe — we never store card details
+â€¢ Account information: email address and password when you sign up
+â€¢ Financial information: income, expenses, savings, debt and goals you enter to generate your plan
+â€¢ Usage data: pages visited, plans generated, features used
+â€¢ Payment information: processed securely by Stripe â€” we never store card details
 
 We also collect automatically:
-• Device type, browser, operating system
-• IP address and approximate location (country level)
-• Cookies and similar tracking technologies`
+â€¢ Device type, browser, operating system
+â€¢ IP address and approximate location (country level)
+â€¢ Cookies and similar tracking technologies`
           },
           {
             title: '2. How We Use Your Information',
             content: `We use your information to:
-• Generate your personalised financial plan using AI
-• Save and display your plans in your dashboard
-• Send weekly action item reminders (if enabled in Settings)
-• Process payments via Stripe
-• Improve our AI models and service quality
-• Comply with legal obligations
+â€¢ Generate your personalised financial plan using AI
+â€¢ Save and display your plans in your dashboard
+â€¢ Send weekly action item reminders (if enabled in Settings)
+â€¢ Process payments via Stripe
+â€¢ Improve our AI models and service quality
+â€¢ Comply with legal obligations
 
 We do NOT sell your personal data to third parties.`
           },
@@ -58,40 +59,40 @@ MyBudget.AI plans are AI-generated and for informational purposes only. They are
           {
             title: '4. Data Storage & Security',
             content: `Your data is stored in Supabase (PostgreSQL database) hosted on AWS infrastructure with encryption at rest and in transit. We use industry-standard security measures including:
-• SSL/TLS encryption for all data in transit
-• Row-level security on all database tables
-• Encrypted storage of sensitive fields
-• Regular security audits
+â€¢ SSL/TLS encryption for all data in transit
+â€¢ Row-level security on all database tables
+â€¢ Encrypted storage of sensitive fields
+â€¢ Regular security audits
 
 Despite these measures, no internet transmission is 100% secure.`
           },
           {
             title: '5. Cookies',
             content: `We use essential cookies to:
-• Keep you logged in (authentication session)
-• Remember your preferences
+â€¢ Keep you logged in (authentication session)
+â€¢ Remember your preferences
 
-We do not use advertising cookies. We use Google Analytics to understand how users use our service — this may set analytics cookies. You can opt out via your browser settings.`
+We do not use advertising cookies. We use Google Analytics to understand how users use our service â€” this may set analytics cookies. You can opt out via your browser settings.`
           },
           {
             title: '6. Third-Party Services',
             content: `We use the following third-party services:
-• Supabase — database and authentication (supabase.com)
-• Stripe — payment processing (stripe.com)
-• DeepSeek — AI plan generation (deepseek.com)
-• Resend — email delivery (resend.com)
-• Vercel — hosting (vercel.com)
+â€¢ Supabase â€” database and authentication (supabase.com)
+â€¢ Stripe â€” payment processing (stripe.com)
+â€¢ DeepSeek â€” AI plan generation (deepseek.com)
+â€¢ Resend â€” email delivery (resend.com)
+â€¢ Vercel â€” hosting (vercel.com)
 
 Each service has its own privacy policy governing their use of your data.`
           },
           {
             title: '7. Your Rights',
             content: `You have the right to:
-• Access: request a copy of your personal data
-• Correction: update inaccurate personal data
-• Deletion: request deletion of your account and all data
-• Portability: export your data in machine-readable format
-• Opt-out: unsubscribe from email reminders at any time in Settings
+â€¢ Access: request a copy of your personal data
+â€¢ Correction: update inaccurate personal data
+â€¢ Deletion: request deletion of your account and all data
+â€¢ Portability: export your data in machine-readable format
+â€¢ Opt-out: unsubscribe from email reminders at any time in Settings
 
 To exercise any of these rights, email us at privacy@costsaverai.com`
           },
@@ -127,3 +128,4 @@ To exercise any of these rights, email us at privacy@costsaverai.com`
     </>
   )
 }
+

@@ -1,9 +1,10 @@
+﻿export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'About MyBudget.AI — AI-Powered Personal Finance',
+  title: 'About MyBudget.AI â€” AI-Powered Personal Finance',
   description: 'MyBudget.AI is an AI-powered personal budget planner built by CostSaver AI. Learn about our mission to make financial planning accessible to everyone.',
 }
 
@@ -19,13 +20,13 @@ export default async function AboutPage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div style={{ fontSize: 13, color: 'var(--muted)', marginBottom: 12 }}>
-            A product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>CostSaver AI ↗</a>
+            A product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>CostSaver AI â†—</a>
           </div>
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(32px,6vw,48px)', letterSpacing: '-0.02em', lineHeight: 1.1, marginBottom: 20 }}>
             Financial planning for<br /><em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>everyone, everywhere.</em>
           </h1>
           <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, maxWidth: 580 }}>
-            MyBudget.AI was built because most financial planning tools are expensive, complicated, or only designed for wealthy countries. We believe everyone — regardless of where they live or how much they earn — deserves a clear, personalised financial plan.
+            MyBudget.AI was built because most financial planning tools are expensive, complicated, or only designed for wealthy countries. We believe everyone â€” regardless of where they live or how much they earn â€” deserves a clear, personalised financial plan.
           </p>
         </div>
 
@@ -33,7 +34,7 @@ export default async function AboutPage() {
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 14, padding: '28px 24px', marginBottom: 32 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: 12 }}>Our Mission</div>
           <p style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, lineHeight: 1.5, fontStyle: 'italic' }}>
-            "To make world-class financial planning accessible to every person on earth — not just those who can afford a financial advisor."
+            "To make world-class financial planning accessible to every person on earth â€” not just those who can afford a financial advisor."
           </p>
         </div>
 
@@ -55,10 +56,10 @@ export default async function AboutPage() {
         <div style={{ marginBottom: 48 }}>
           <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 26, letterSpacing: '-0.02em', marginBottom: 20 }}>How MyBudget.AI works</h2>
           {[
-            { icon: '✏️', title: 'You answer 8 questions', desc: 'Income, expenses, savings, debt, goal, timeframe, and risk tolerance. Takes about 60 seconds.' },
-            { icon: '🤖', title: 'AI builds your plan', desc: 'Our AI (powered by DeepSeek) analyses your specific situation, country, and goals to generate a personalised financial plan — not a generic template.' },
-            { icon: '📊', title: 'Free insights, immediately', desc: 'Budget breakdown, grocery tip for your country, savings teaser, and an honest insight about your finances — all free, no account needed.' },
-            { icon: '🔓', title: 'Full report for $5', desc: 'Investment picks specific to your country and risk level, best savings accounts, business ideas, 90-day action plan, goal timeline, and PDF export.' },
+            { icon: 'âœï¸', title: 'You answer 8 questions', desc: 'Income, expenses, savings, debt, goal, timeframe, and risk tolerance. Takes about 60 seconds.' },
+            { icon: 'ðŸ¤–', title: 'AI builds your plan', desc: 'Our AI (powered by DeepSeek) analyses your specific situation, country, and goals to generate a personalised financial plan â€” not a generic template.' },
+            { icon: 'ðŸ“Š', title: 'Free insights, immediately', desc: 'Budget breakdown, grocery tip for your country, savings teaser, and an honest insight about your finances â€” all free, no account needed.' },
+            { icon: 'ðŸ”“', title: 'Full report for $5', desc: 'Investment picks specific to your country and risk level, best savings accounts, business ideas, 90-day action plan, goal timeline, and PDF export.' },
           ].map((s, i) => (
             <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 20, padding: '18px 20px', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12 }}>
               <span style={{ fontSize: 28, flexShrink: 0, marginTop: 2 }}>{s.icon}</span>
@@ -74,10 +75,10 @@ export default async function AboutPage() {
         <div style={{ background: 'linear-gradient(135deg,rgba(200,240,96,0.05),rgba(200,240,96,0.02))', border: '1px solid rgba(200,240,96,0.2)', borderRadius: 14, padding: '28px 24px', marginBottom: 48 }}>
           <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, letterSpacing: '-0.02em', marginBottom: 12 }}>Part of the CostSaver AI family</h2>
           <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 16 }}>
-            MyBudget.AI is built and maintained by <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> — a company building AI-powered tools that help people and businesses save money and make smarter financial decisions.
+            MyBudget.AI is built and maintained by <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> â€” a company building AI-powered tools that help people and businesses save money and make smarter financial decisions.
           </p>
           <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 20px', background: 'rgba(200,240,96,0.1)', border: '1px solid rgba(200,240,96,0.3)', borderRadius: 8, fontSize: 14, fontWeight: 600, color: 'var(--accent)', textDecoration: 'none' }}>
-            Visit CostSaver AI ↗
+            Visit CostSaver AI â†—
           </a>
         </div>
 
@@ -90,11 +91,12 @@ export default async function AboutPage() {
         </div>
 
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 13 }}>
-          <Link href="/signup" style={{ display: 'inline-flex', padding: '12px 24px', background: 'var(--accent)', color: '#09090b', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Build my free plan →</Link>
+          <Link href="/signup" style={{ display: 'inline-flex', padding: '12px 24px', background: 'var(--accent)', color: '#09090b', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Build my free plan â†’</Link>
           <Link href="/contact" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>Contact us</Link>
-          <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--muted)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>CostSaver AI ↗</a>
+          <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--muted)', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>CostSaver AI â†—</a>
         </div>
       </div>
     </>
   )
 }
+

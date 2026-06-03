@@ -1,3 +1,4 @@
+﻿export const runtime = 'edge'
 import { NextResponse } from 'next/server'
 import { createClient, createServiceClient } from '@/lib/supabase/server'
 
@@ -20,3 +21,4 @@ export async function POST(req: Request) {
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
   return NextResponse.json({ shareUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/share/${data.id}` })
 }
+

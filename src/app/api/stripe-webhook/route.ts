@@ -1,12 +1,18 @@
+﻿export const runtime = 'edge'
 import { NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/server'
-import crypto from 'crypto'
 
-function verifyWebhook(payload: string, signature: string, secret: string) {
+// Web Crypto version of HMAC verification (edge compatible)
+async function verifyWebhook(payload: string, signature: string, secret: string) {
   const parts = Object.fromEntries(signature.split(',').map(p => p.split('=')))
   const timestamp = parts['t'], v1 = parts['v1']
   if (!timestamp || !v1) throw new Error('Invalid signature')
   if (Math.abs(Date.now() / 1000 - Number(timestamp)) > 300) throw new Error('Timestamp too old')
+  const enc = new TextEncoder()
+  const key = await crypto.subtle.importKey('raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign'])
+  const sig = await crypto.subtle.sign('HMAC', key, enc.encode(`${timestamp}.${payload}`))
+  const expected = Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2,'0')).join('')
+  if (expected !== v1) throw new Error('Signature mismatch')
   const expected = crypto.createHmac('sha256', secret).update(`${timestamp}.${payload}`).digest('hex')
   if (expected !== v1) throw new Error('Signature mismatch')
   return JSON.parse(payload)
@@ -18,7 +24,7 @@ export async function POST(req: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET || ''
 
   let event: any
-  try { event = verifyWebhook(body, sig, secret) }
+  try { event = await verifyWebhook(body, sig, secret) }
   catch (e: any) { return NextResponse.json({ error: e.message }, { status: 400 }) }
 
   if (event.type === 'checkout.session.completed') {
@@ -47,3 +53,4 @@ export async function POST(req: Request) {
 
   return NextResponse.json({ received: true })
 }
+

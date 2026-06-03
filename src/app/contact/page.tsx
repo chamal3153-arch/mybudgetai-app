@@ -1,3 +1,4 @@
+﻿export const runtime = 'edge'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 import ContactForm from './ContactForm'
@@ -24,10 +25,10 @@ export default async function ContactPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 36 }}>
           {[
-            { icon: '💬', title: 'General support', email: 'support@costsaverai.com' },
-            { icon: '💳', title: 'Billing & refunds', email: 'billing@costsaverai.com' },
-            { icon: '🔒', title: 'Privacy concerns', email: 'privacy@costsaverai.com' },
-            { icon: '🤝', title: 'Partnerships', email: 'hello@costsaverai.com' },
+            { icon: 'ðŸ’¬', title: 'General support', email: 'support@costsaverai.com' },
+            { icon: 'ðŸ’³', title: 'Billing & refunds', email: 'billing@costsaverai.com' },
+            { icon: 'ðŸ”’', title: 'Privacy concerns', email: 'privacy@costsaverai.com' },
+            { icon: 'ðŸ¤', title: 'Partnerships', email: 'hello@costsaverai.com' },
           ].map(c => (
             <div key={c.title} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12, padding: '18px 16px' }}>
               <div style={{ fontSize: 22, marginBottom: 8 }}>{c.icon}</div>
@@ -42,3 +43,4 @@ export default async function ContactPage() {
     </>
   )
 }
+

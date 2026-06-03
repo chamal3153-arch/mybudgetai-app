@@ -1,3 +1,4 @@
+﻿export const runtime = 'edge'
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
@@ -60,9 +61,9 @@ export default function LoginPage() {
             </div>
             <div style={{ marginBottom: 20 }}>
               <label style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 6 }}>Password</label>
-              <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" style={inputStyle} />
+              <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style={inputStyle} />
             </div>
-            <button type="submit" disabled={loading} style={btnStyle}>{loading ? 'Signing in...' : 'Sign in →'}</button>
+            <button type="submit" disabled={loading} style={btnStyle}>{loading ? 'Signing in...' : 'Sign in â†’'}</button>
           </form>
         </div>
         <p style={{ textAlign: 'center', marginTop: 16, fontSize: 13, color: 'var(--muted)' }}>
@@ -76,3 +77,4 @@ export default function LoginPage() {
 const inputStyle: React.CSSProperties = { width: '100%', padding: '12px 14px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 8, color: 'var(--body)', fontSize: 14, outline: 'none', fontFamily: 'inherit' }
 const btnStyle: React.CSSProperties = { width: '100%', padding: '14px', background: 'var(--accent)', color: '#09090b', border: 'none', borderRadius: 8, fontSize: 15, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }
 const googleBtnStyle: React.CSSProperties = { width: '100%', padding: '13px', background: '#fff', color: '#1f1f1f', border: '1px solid #dadce0', borderRadius: 8, fontSize: 14, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }
+
