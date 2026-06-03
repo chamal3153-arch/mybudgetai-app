@@ -13,8 +13,6 @@ async function verifyWebhook(payload: string, signature: string, secret: string)
   const sig = await crypto.subtle.sign('HMAC', key, enc.encode(`${timestamp}.${payload}`))
   const expected = Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2,'0')).join('')
   if (expected !== v1) throw new Error('Signature mismatch')
-  const expected = crypto.createHmac('sha256', secret).update(`${timestamp}.${payload}`).digest('hex')
-  if (expected !== v1) throw new Error('Signature mismatch')
   return JSON.parse(payload)
 }
 
