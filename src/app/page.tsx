@@ -13,7 +13,10 @@ export default async function LandingPage() {
       <section style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 20px 60px', minHeight: '90vh' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 20% 40%, rgba(200,240,96,0.07) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 80% 60%, rgba(240,192,96,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: 600, width: '100%' }}>
-          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 24, color: 'var(--accent)', letterSpacing: '-0.02em', display: 'block', marginBottom: 48, textShadow: '0 0 24px rgba(200,240,96,0.4)' }}>MyBudget.AI</span>
+          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 24, color: 'var(--accent)', letterSpacing: '-0.02em', display: 'block', marginBottom: 12, textShadow: '0 0 24px rgba(200,240,96,0.4)' }}>MyBudget.AI</span>
+          <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--muted)', textDecoration: 'none', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: 100, marginBottom: 40, background: 'var(--surface)' }}>
+            A <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> product ↗
+          </a>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 36, flexWrap: 'wrap' }}>
             <span style={{ fontSize: 13, color: 'var(--muted)' }}><span style={{ color: '#f0c060' }}>★★★★★</span> 4.9 / 5</span>
             <span style={{ fontSize: 13, color: 'var(--muted)' }}>👤 12,000+ plans generated</span>
@@ -115,15 +118,38 @@ export default async function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '24px 20px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <span style={{ fontFamily: 'var(--font-serif,serif)', color: 'var(--accent)', fontSize: 16 }}>MyBudget.AI</span>
-          <div style={{ display: 'flex', gap: 20, fontSize: 13, color: 'var(--muted)', flexWrap: 'wrap' }}>
-            <Link href="/calculators" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Calculators</Link>
-            <Link href="/login" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Sign in</Link>
-            <Link href="/signup" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Sign up</Link>
+      <footer style={{ borderTop: '1px solid var(--border)', padding: '40px 20px 28px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 32, marginBottom: 36 }}>
+            <div>
+              <div style={{ fontFamily: 'var(--font-serif,serif)', color: 'var(--accent)', fontSize: 18, marginBottom: 6, textShadow: '0 0 16px rgba(200,240,96,0.3)' }}>MyBudget.AI</div>
+              <p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 10 }}>AI-powered personal budget planner. Free to start.</p>
+              <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4, border: '1px solid var(--border)', padding: '4px 10px', borderRadius: 6 }}>
+                A CostSaver AI product ↗
+              </a>
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Product</div>
+              {[['/', 'Home'], ['/plan/new', 'New Plan'], ['/calculators', 'Calculators'], ['/about', 'About']].map(([href, label]) => (
+                <div key={href} style={{ marginBottom: 8 }}><Link href={href} style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>{label}</Link></div>
+              ))}
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Legal</div>
+              {[['/privacy', 'Privacy Policy'], ['/terms', 'Terms of Service'], ['/contact', 'Contact Us']].map(([href, label]) => (
+                <div key={href} style={{ marginBottom: 8 }}><Link href={href} style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>{label}</Link></div>
+              ))}
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>CostSaver AI</div>
+              <p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 10 }}>MyBudget.AI is part of the CostSaver AI family of money-saving tools.</p>
+              <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ fontSize: 13, color: 'var(--accent)', textDecoration: 'none' }}>costsaverai.com ↗</a>
+            </div>
           </div>
-          <span style={{ fontSize: 12, color: 'var(--muted)' }}>Not financial advice · AI-generated plans</span>
+          <div style={{ borderTop: '1px solid var(--border)', paddingTop: 20, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>© 2026 CostSaver AI. All rights reserved.</span>
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>AI-generated plans · Not financial advice · Always consult a qualified advisor</span>
+          </div>
         </div>
       </footer>
     </main>
