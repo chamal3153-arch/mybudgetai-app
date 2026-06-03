@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cf": "npx @cloudflare/next-on-pages",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "pages:deploy": "npm run build:cf && wrangler pages deploy"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.7.0",
@@ -22,14 +24,17 @@
     "stripe": "^22.2.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "libsodium-wrappers": "^0.8.4",
     "pg": "^8.21.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.97.0"
   }
 }
