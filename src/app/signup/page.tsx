@@ -1,5 +1,4 @@
-﻿export const runtime = 'edge'
-'use client'
+﻿'use client'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -81,4 +80,5 @@ export default function SignupPage() {
 const inputStyle: React.CSSProperties = { width: '100%', padding: '12px 14px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 8, color: 'var(--body)', fontSize: 14, outline: 'none', fontFamily: 'inherit' }
 const btnStyle: React.CSSProperties = { width: '100%', padding: '14px', background: 'var(--accent)', color: '#09090b', border: 'none', borderRadius: 8, fontSize: 15, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }
 const googleBtnStyle: React.CSSProperties = { width: '100%', padding: '13px', background: '#fff', color: '#1f1f1f', border: '1px solid #dadce0', borderRadius: 8, fontSize: 14, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }
+
 
