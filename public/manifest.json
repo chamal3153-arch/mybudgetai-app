@@ -1,6 +1,6 @@
 {
-  "name": "BudgetPlan.AI",
-  "short_name": "BudgetPlan.AI",
+  "name": "BudgetPlan AI",
+  "short_name": "BudgetPlan AI",
   "description": "Free AI budget planner — get a personalised financial plan in 60 seconds",
   "start_url": "/",
   "display": "standalone",

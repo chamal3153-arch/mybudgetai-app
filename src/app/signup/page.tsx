@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -37,9 +37,9 @@ export default function SignupPage() {
     <main style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
       <div style={{ width: '100%', maxWidth: 400 }}>
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <Link href="/" style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, color: 'var(--accent)', textDecoration: 'none' }}>BudgetPlan.AI</Link>
+          <Link href="/" style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, color: 'var(--accent)', textDecoration: 'none' }}>BudgetPlan AI</Link>
           <h1 style={{ fontSize: 24, fontWeight: 600, marginTop: 20, marginBottom: 6 }}>Create your account</h1>
-          <p style={{ color: 'var(--muted)', fontSize: 14 }}>Free to start Â· Full report $5</p>
+          <p style={{ color: 'var(--muted)', fontSize: 14 }}>Free to start · Full report $5</p>
         </div>
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 16, padding: 28 }}>
           {error && <div style={{ background: 'rgba(248,113,113,0.08)', border: '1px solid rgba(248,113,113,0.2)', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--error)', marginBottom: 16 }}>{error}</div>}
@@ -65,7 +65,7 @@ export default function SignupPage() {
               <label style={{ display: 'block', fontSize: 13, fontWeight: 500, marginBottom: 6 }}>Password</label>
               <input type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="Min 8 characters" minLength={8} style={inputStyle} />
             </div>
-            <button type="submit" disabled={loading} style={btnStyle}>{loading ? 'Creating account...' : 'Get started free â†’'}</button>
+            <button type="submit" disabled={loading} style={btnStyle}>{loading ? 'Creating account...' : 'Get started free →'}</button>
             <p style={{ fontSize: 11, color: 'var(--muted)', marginTop: 12, textAlign: 'center', lineHeight: 1.5 }}>By signing up you agree to our terms. Not financial advice.</p>
           </form>
         </div>

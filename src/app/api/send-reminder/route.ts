@@ -1,4 +1,4 @@
-﻿export const runtime = 'edge'
+export const runtime = 'edge'
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { createServiceClient } from '@/lib/supabase/server'
@@ -46,21 +46,21 @@ async function handler(req: Request) {
 
     try {
       await resend.emails.send({
-        from: 'BudgetPlan.AI <reminders@BudgetPlan.AI>',
+        from: 'BudgetPlan AI <reminders@BudgetPlan AI>',
         to: profile.email,
-        subject: `ðŸ“Š Your ${plan.goal} action items this week`,
+        subject: `📊 Your ${plan.goal} action items this week`,
         html: `
           <div style="font-family:sans-serif;max-width:560px;margin:0 auto;background:#09090b;color:#e4e4e7;padding:32px 24px;border-radius:12px;">
-            <h2 style="color:#c8f060;font-size:22px;margin-bottom:8px;">BudgetPlan.AI</h2>
-            <h3 style="font-size:20px;margin-bottom:6px;">Your weekly financial check-in ðŸ‘‹</h3>
-            <p style="color:#71717a;font-size:14px;margin-bottom:24px;">Goal: <strong style="color:#e4e4e7">${plan.goal}</strong> in ${plan.timeframe} Â· ${plan.country}</p>
+            <h2 style="color:#c8f060;font-size:22px;margin-bottom:8px;">BudgetPlan AI</h2>
+            <h3 style="font-size:20px;margin-bottom:6px;">Your weekly financial check-in 👋</h3>
+            <p style="color:#71717a;font-size:14px;margin-bottom:24px;">Goal: <strong style="color:#e4e4e7">${plan.goal}</strong> in ${plan.timeframe} · ${plan.country}</p>
             ${actions.length > 0 ? `
               <div style="background:#111116;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:18px 20px;margin-bottom:20px;">
                 <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#71717a;margin-bottom:12px;">Your action items</div>
-                ${actions.map((a: string) => `<div style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.5;"><span style="color:#c8f060;flex-shrink:0;">â†’</span><span>${a}</span></div>`).join('')}
+                ${actions.map((a: string) => `<div style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.5;"><span style="color:#c8f060;flex-shrink:0;">→</span><span>${a}</span></div>`).join('')}
               </div>
             ` : ''}
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/dashboard" style="display:inline-block;padding:12px 24px;background:#c8f060;color:#09090b;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px;">View My Dashboard â†’</a>
+            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/dashboard" style="display:inline-block;padding:12px 24px;background:#c8f060;color:#09090b;border-radius:8px;font-weight:600;text-decoration:none;font-size:14px;">View My Dashboard →</a>
             <p style="margin-top:24px;font-size:11px;color:#71717a;">You're receiving this because you enabled weekly reminders in settings. <a href="${process.env.NEXT_PUBLIC_SITE_URL}/settings" style="color:#71717a;">Unsubscribe</a></p>
           </div>
         `

@@ -1,11 +1,11 @@
-ï»¿export const runtime = 'edge'
+export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'Terms of Service | BudgetPlan.AI',
-  description: 'Terms of Service for BudgetPlan.AI - rules for using our AI financial planning service.',
+  title: 'Terms of Service | BudgetPlan AI',
+  description: 'Terms of Service for BudgetPlan AI - rules for using our AI financial planning service.',
 }
 
 export default async function TermsPage() {
@@ -20,46 +20,46 @@ export default async function TermsPage() {
           <p style={{ fontSize: 13, color: 'var(--muted)', marginBottom: 8 }}>Last updated: June 3, 2026</p>
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 36, letterSpacing: '-0.02em', marginBottom: 10 }}>Terms of Service</h1>
           <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.7 }}>
-            These Terms of Service govern your use of BudgetPlan.AI, a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>. By using our service, you agree to these terms.
+            These Terms of Service govern your use of BudgetPlan AI, a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>. By using our service, you agree to these terms.
           </p>
         </div>
 
         {[
           {
             title: '1. Acceptance of Terms',
-            content: `By creating an account or using BudgetPlan.AI, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the service.\n\nYou must be at least 16 years old to use BudgetPlan.AI.`
+            content: `By creating an account or using BudgetPlan AI, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the service.\n\nYou must be at least 16 years old to use BudgetPlan AI.`
           },
           {
             title: '2. Not Financial Advice',
-            content: `IMPORTANT: BudgetPlan.AI provides AI-generated financial information for educational and informational purposes only. Nothing on this platform constitutes:\nâ€¢ Financial advice\nâ€¢ Investment advice\nâ€¢ Tax advice\nâ€¢ Legal advice\nâ€¢ Accounting advice\n\nAlways consult a qualified, licensed financial advisor before making any financial decisions. CostSaver AI and its products are not registered investment advisors.`
+            content: `IMPORTANT: BudgetPlan AI provides AI-generated financial information for educational and informational purposes only. Nothing on this platform constitutes:\n• Financial advice\n• Investment advice\n• Tax advice\n• Legal advice\n• Accounting advice\n\nAlways consult a qualified, licensed financial advisor before making any financial decisions. CostSaver AI and its products are not registered investment advisors.`
           },
           {
             title: '3. Your Account',
-            content: `You are responsible for:\nâ€¢ Maintaining the confidentiality of your login credentials\nâ€¢ All activity that occurs under your account\nâ€¢ Providing accurate information when creating your account\nâ€¢ Notifying us immediately of any unauthorised use\n\nWe reserve the right to suspend or terminate accounts that violate these terms.`
+            content: `You are responsible for:\n• Maintaining the confidentiality of your login credentials\n• All activity that occurs under your account\n• Providing accurate information when creating your account\n• Notifying us immediately of any unauthorised use\n\nWe reserve the right to suspend or terminate accounts that violate these terms.`
           },
           {
             title: '4. Payments & Refunds',
-            content: `BudgetPlan.AI offers a free tier and a one-time paid full report ($5).\n\nPayment: All payments are processed securely by Stripe. We do not store payment card information.\n\nRefund Policy: Due to the digital and immediate nature of our service (AI-generated plans are delivered instantly), all sales are final. If you experience a technical issue preventing delivery of your plan, contact us within 7 days at support@costsaverai.com for a full refund.`
+            content: `BudgetPlan AI offers a free tier and a one-time paid full report ($5).\n\nPayment: All payments are processed securely by Stripe. We do not store payment card information.\n\nRefund Policy: Due to the digital and immediate nature of our service (AI-generated plans are delivered instantly), all sales are final. If you experience a technical issue preventing delivery of your plan, contact us within 7 days at support@costsaverai.com for a full refund.`
           },
           {
             title: '5. Acceptable Use',
-            content: `You agree not to:\nâ€¢ Use the service for any unlawful purpose\nâ€¢ Attempt to reverse-engineer, scrape, or extract data from our service\nâ€¢ Share your account credentials with others\nâ€¢ Use the service to harass, harm, or defraud others\nâ€¢ Attempt to circumvent payment requirements\nâ€¢ Use automated tools to generate plans at scale without permission\n\nViolation of these rules may result in immediate account termination without refund.`
+            content: `You agree not to:\n• Use the service for any unlawful purpose\n• Attempt to reverse-engineer, scrape, or extract data from our service\n• Share your account credentials with others\n• Use the service to harass, harm, or defraud others\n• Attempt to circumvent payment requirements\n• Use automated tools to generate plans at scale without permission\n\nViolation of these rules may result in immediate account termination without refund.`
           },
           {
             title: '6. Intellectual Property',
-            content: `The BudgetPlan.AI platform, brand, and all associated content are owned by CostSaver AI.\n\nYour financial plans generated by the AI are yours to use for personal purposes. You may not resell, redistribute, or commercially exploit AI-generated plans without written permission.`
+            content: `The BudgetPlan AI platform, brand, and all associated content are owned by CostSaver AI.\n\nYour financial plans generated by the AI are yours to use for personal purposes. You may not resell, redistribute, or commercially exploit AI-generated plans without written permission.`
           },
           {
             title: '7. Accuracy of Information',
-            content: `AI-generated financial plans are based on the information you provide. The quality of your plan depends on the accuracy of your inputs. We make no guarantee that:\nâ€¢ Plans are accurate, complete, or up-to-date\nâ€¢ Investment recommendations will perform as described\nâ€¢ Business ideas will be profitable\nâ€¢ Goal timelines are achievable\n\nPast performance of investment types mentioned is not indicative of future results.`
+            content: `AI-generated financial plans are based on the information you provide. The quality of your plan depends on the accuracy of your inputs. We make no guarantee that:\n• Plans are accurate, complete, or up-to-date\n• Investment recommendations will perform as described\n• Business ideas will be profitable\n• Goal timelines are achievable\n\nPast performance of investment types mentioned is not indicative of future results.`
           },
           {
             title: '8. Limitation of Liability',
-            content: `To the fullest extent permitted by law, CostSaver AI and BudgetPlan.AI shall not be liable for:\nâ€¢ Any financial losses resulting from actions taken based on our plans\nâ€¢ Indirect, incidental, or consequential damages\nâ€¢ Loss of data or service interruptions\nâ€¢ Third-party service failures (Stripe, Supabase, etc.)\n\nOur total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.`
+            content: `To the fullest extent permitted by law, CostSaver AI and BudgetPlan AI shall not be liable for:\n• Any financial losses resulting from actions taken based on our plans\n• Indirect, incidental, or consequential damages\n• Loss of data or service interruptions\n• Third-party service failures (Stripe, Supabase, etc.)\n\nOur total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.`
           },
           {
             title: '9. Service Availability',
-            content: `We aim to provide 99.9% uptime but do not guarantee uninterrupted service. We may:\nâ€¢ Modify or discontinue features with notice\nâ€¢ Perform scheduled maintenance\nâ€¢ Experience unexpected outages\n\nWe are not liable for any losses caused by service unavailability.`
+            content: `We aim to provide 99.9% uptime but do not guarantee uninterrupted service. We may:\n• Modify or discontinue features with notice\n• Perform scheduled maintenance\n• Experience unexpected outages\n\nWe are not liable for any losses caused by service unavailability.`
           },
           {
             title: '10. Governing Law',

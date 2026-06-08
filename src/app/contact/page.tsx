@@ -1,11 +1,11 @@
-﻿export const runtime = 'edge'
+export const runtime = 'edge'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 import ContactForm from './ContactForm'
 
 export const metadata = {
-  title: 'Contact Us | BudgetPlan.AI',
-  description: 'Get in touch with the BudgetPlan.AI team. We are here to help with any questions about your financial plan.',
+  title: 'Contact Us | BudgetPlan AI',
+  description: 'Get in touch with the BudgetPlan AI team. We are here to help with any questions about your financial plan.',
 }
 
 export default async function ContactPage() {
@@ -19,16 +19,16 @@ export default async function ContactPage() {
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 36, letterSpacing: '-0.02em', marginBottom: 10 }}>Contact Us</h1>
           <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.7 }}>
             Questions about your plan, billing, or the product? We&apos;re here to help.
-            BudgetPlan.AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>.
+            BudgetPlan AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>.
           </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 36 }}>
           {[
-            { icon: '💬', title: 'General support', email: 'support@costsaverai.com' },
-            { icon: '💳', title: 'Billing & refunds', email: 'billing@costsaverai.com' },
-            { icon: '🔒', title: 'Privacy concerns', email: 'privacy@costsaverai.com' },
-            { icon: '🤝', title: 'Partnerships', email: 'hello@costsaverai.com' },
+            { icon: '??', title: 'General support', email: 'support@costsaverai.com' },
+            { icon: '??', title: 'Billing & refunds', email: 'billing@costsaverai.com' },
+            { icon: '??', title: 'Privacy concerns', email: 'privacy@costsaverai.com' },
+            { icon: '??', title: 'Partnerships', email: 'hello@costsaverai.com' },
           ].map(c => (
             <div key={c.title} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12, padding: '18px 16px' }}>
               <div style={{ fontSize: 22, marginBottom: 8 }}>{c.icon}</div>
