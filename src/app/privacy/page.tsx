@@ -1,11 +1,11 @@
-export const runtime = 'edge'
+﻿export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'Privacy Policy | MyBudget.AI',
-  description: 'Privacy Policy for MyBudget.AI - how we collect, use and protect your data.',
+  title: 'Privacy Policy | BudgetPlan.AI',
+  description: 'Privacy Policy for BudgetPlan.AI - how we collect, use and protect your data.',
 }
 
 export default async function PrivacyPage() {
@@ -20,7 +20,7 @@ export default async function PrivacyPage() {
           <p style={{ fontSize: 13, color: 'var(--muted)', marginBottom: 8 }}>Last updated: June 3, 2026</p>
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 36, letterSpacing: '-0.02em', marginBottom: 10 }}>Privacy Policy</h1>
           <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.7 }}>
-            MyBudget.AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>. We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights.
+            BudgetPlan.AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>. We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default async function PrivacyPage() {
           },
           {
             title: '3. AI-Generated Financial Plans',
-            content: `Your financial data is sent to DeepSeek's API to generate your plan. This data is used solely for generating your plan and is subject to DeepSeek's privacy policy. We do not use your financial data to train AI models without your consent.\n\nMyBudget.AI plans are AI-generated and for informational purposes only. They are not financial advice. Always consult a qualified financial advisor before making investment decisions.`
+            content: `Your financial data is sent to DeepSeek's API to generate your plan. This data is used solely for generating your plan and is subject to DeepSeek's privacy policy. We do not use your financial data to train AI models without your consent.\n\nBudgetPlan.AI plans are AI-generated and for informational purposes only. They are not financial advice. Always consult a qualified financial advisor before making investment decisions.`
           },
           {
             title: '4. Data Storage & Security',
@@ -59,7 +59,7 @@ export default async function PrivacyPage() {
           },
           {
             title: "9. Children's Privacy",
-            content: `MyBudget.AI is not directed at children under 16. We do not knowingly collect personal information from children under 16. If you believe we have collected data from a child, contact us immediately at privacy@costsaverai.com`
+            content: `BudgetPlan.AI is not directed at children under 16. We do not knowingly collect personal information from children under 16. If you believe we have collected data from a child, contact us immediately at privacy@costsaverai.com`
           },
           {
             title: '10. Changes to This Policy',

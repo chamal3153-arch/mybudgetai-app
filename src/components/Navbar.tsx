@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
@@ -107,7 +107,7 @@ export default function Navbar({ user }: { user: { email?: string } | null }) {
             letterSpacing: '-0.02em',
             textShadow: '0 0 20px rgba(200,240,96,0.4)',
           }}>
-            MyBudget.AI
+            BudgetPlan.AI
           </Link>
 
           {/* Logged in nav */}

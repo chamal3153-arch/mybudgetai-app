@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { COUNTRIES } from '@/lib/countries'
@@ -51,7 +51,7 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
 
   if (step === 'loading') return (
     <div style={{ minHeight: 'calc(100vh - 60px)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', textAlign: 'center', padding: 20 }}>
-      <div style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 28, color: 'var(--accent)', marginBottom: 40 }}>MyBudget.AI</div>
+      <div style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 28, color: 'var(--accent)', marginBottom: 40 }}>BudgetPlan.AI</div>
       <div style={{ fontSize: 17, color: 'var(--body)', marginBottom: 32, minHeight: 28 }}>{MSGS[msgIdx]}</div>
       <div style={{ width: 280, height: 2, background: 'var(--border)', borderRadius: 1, overflow: 'hidden' }}>
         <div style={{ height: '100%', background: 'var(--accent)', borderRadius: 1, animation: 'loadbar 2.5s ease-in-out infinite' }} />

@@ -1,4 +1,4 @@
-export const runtime = 'edge'
+﻿export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
@@ -14,7 +14,7 @@ export default async function LandingPage() {
       <section style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 20px 60px', minHeight: '90vh' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 20% 40%, rgba(200,240,96,0.07) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 80% 60%, rgba(240,192,96,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', maxWidth: 600, width: '100%' }}>
-          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 24, color: 'var(--accent)', letterSpacing: '-0.02em', display: 'block', marginBottom: 12, textShadow: '0 0 24px rgba(200,240,96,0.4)' }}>MyBudget.AI</span>
+          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 24, color: 'var(--accent)', letterSpacing: '-0.02em', display: 'block', marginBottom: 12, textShadow: '0 0 24px rgba(200,240,96,0.4)' }}>BudgetPlan.AI</span>
           <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--muted)', textDecoration: 'none', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: 100, marginBottom: 40, background: 'var(--surface)' }}>
             A <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> product &nbsp;&#8599;
           </a>
@@ -123,7 +123,7 @@ export default async function LandingPage() {
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 32, marginBottom: 36 }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-serif,serif)', color: 'var(--accent)', fontSize: 18, marginBottom: 6, textShadow: '0 0 16px rgba(200,240,96,0.3)' }}>MyBudget.AI</div>
+              <div style={{ fontFamily: 'var(--font-serif,serif)', color: 'var(--accent)', fontSize: 18, marginBottom: 6, textShadow: '0 0 16px rgba(200,240,96,0.3)' }}>BudgetPlan.AI</div>
               <p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 10 }}>AI-powered personal budget planner. Free to start.</p>
               <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4, border: '1px solid var(--border)', padding: '4px 10px', borderRadius: 6 }}>
                 A CostSaver AI product &#8599;
@@ -143,7 +143,7 @@ export default async function LandingPage() {
             </div>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>CostSaver AI</div>
-              <p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 10 }}>MyBudget.AI is part of the CostSaver AI family of money-saving tools.</p>
+              <p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 10 }}>BudgetPlan.AI is part of the CostSaver AI family of money-saving tools.</p>
               <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ fontSize: 13, color: 'var(--accent)', textDecoration: 'none' }}>costsaverai.com &#8599;</a>
             </div>
           </div>

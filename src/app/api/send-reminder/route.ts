@@ -46,12 +46,12 @@ async function handler(req: Request) {
 
     try {
       await resend.emails.send({
-        from: 'MyBudget.AI <reminders@mybudget.ai>',
+        from: 'BudgetPlan.AI <reminders@BudgetPlan.AI>',
         to: profile.email,
         subject: `ðŸ“Š Your ${plan.goal} action items this week`,
         html: `
           <div style="font-family:sans-serif;max-width:560px;margin:0 auto;background:#09090b;color:#e4e4e7;padding:32px 24px;border-radius:12px;">
-            <h2 style="color:#c8f060;font-size:22px;margin-bottom:8px;">MyBudget.AI</h2>
+            <h2 style="color:#c8f060;font-size:22px;margin-bottom:8px;">BudgetPlan.AI</h2>
             <h3 style="font-size:20px;margin-bottom:6px;">Your weekly financial check-in ðŸ‘‹</h3>
             <p style="color:#71717a;font-size:14px;margin-bottom:24px;">Goal: <strong style="color:#e4e4e7">${plan.goal}</strong> in ${plan.timeframe} Â· ${plan.country}</p>
             ${actions.length > 0 ? `

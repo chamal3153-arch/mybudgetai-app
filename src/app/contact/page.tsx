@@ -1,11 +1,11 @@
-export const runtime = 'edge'
+﻿export const runtime = 'edge'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 import ContactForm from './ContactForm'
 
 export const metadata = {
-  title: 'Contact Us | MyBudget.AI',
-  description: 'Get in touch with the MyBudget.AI team. We are here to help with any questions about your financial plan.',
+  title: 'Contact Us | BudgetPlan.AI',
+  description: 'Get in touch with the BudgetPlan.AI team. We are here to help with any questions about your financial plan.',
 }
 
 export default async function ContactPage() {
@@ -19,7 +19,7 @@ export default async function ContactPage() {
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 36, letterSpacing: '-0.02em', marginBottom: 10 }}>Contact Us</h1>
           <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.7 }}>
             Questions about your plan, billing, or the product? We&apos;re here to help.
-            MyBudget.AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>.
+            BudgetPlan.AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>.
           </p>
         </div>
 

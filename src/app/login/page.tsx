@@ -34,7 +34,7 @@ export default function LoginPage() {
     <main style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
       <div style={{ width: '100%', maxWidth: 400 }}>
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <Link href="/" style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, color: 'var(--accent)', textDecoration: 'none' }}>MyBudget.AI</Link>
+          <Link href="/" style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, color: 'var(--accent)', textDecoration: 'none' }}>BudgetPlan.AI</Link>
           <h1 style={{ fontSize: 24, fontWeight: 600, marginTop: 20, marginBottom: 6 }}>Welcome back</h1>
           <p style={{ color: 'var(--muted)', fontSize: 14 }}>Sign in to your account</p>
         </div>

@@ -1,11 +1,11 @@
-export const runtime = 'edge'
+﻿export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'About MyBudget.AI - AI-Powered Personal Finance',
-  description: 'MyBudget.AI is an AI-powered personal budget planner built by CostSaver AI. Learn about our mission to make financial planning accessible to everyone.',
+  title: 'About BudgetPlan.AI - AI-Powered Personal Finance',
+  description: 'BudgetPlan.AI is an AI-powered personal budget planner built by CostSaver AI. Learn about our mission to make financial planning accessible to everyone.',
 }
 
 export default async function AboutPage() {
@@ -26,7 +26,7 @@ export default async function AboutPage() {
             Financial planning for<br /><em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>everyone, everywhere.</em>
           </h1>
           <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, maxWidth: 580 }}>
-            MyBudget.AI was built because most financial planning tools are expensive, complicated, or only designed for wealthy countries. We believe everyone &mdash; regardless of where they live or how much they earn &mdash; deserves a clear, personalised financial plan.
+            BudgetPlan.AI was built because most financial planning tools are expensive, complicated, or only designed for wealthy countries. We believe everyone &mdash; regardless of where they live or how much they earn &mdash; deserves a clear, personalised financial plan.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default async function AboutPage() {
 
         {/* How it works */}
         <div style={{ marginBottom: 48 }}>
-          <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 26, letterSpacing: '-0.02em', marginBottom: 20 }}>How MyBudget.AI works</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 26, letterSpacing: '-0.02em', marginBottom: 20 }}>How BudgetPlan.AI works</h2>
           {[
             { icon: '✏️', title: 'You answer 8 questions', desc: 'Income, expenses, savings, debt, goal, timeframe, and risk tolerance. Takes about 60 seconds.' },
             { icon: '🤖', title: 'AI builds your plan', desc: 'Our AI (powered by DeepSeek) analyses your specific situation, country, and goals to generate a personalised financial plan — not a generic template.' },
@@ -75,7 +75,7 @@ export default async function AboutPage() {
         <div style={{ background: 'linear-gradient(135deg,rgba(200,240,96,0.05),rgba(200,240,96,0.02))', border: '1px solid rgba(200,240,96,0.2)', borderRadius: 14, padding: '28px 24px', marginBottom: 48 }}>
           <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, letterSpacing: '-0.02em', marginBottom: 12 }}>Part of the CostSaver AI family</h2>
           <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 16 }}>
-            MyBudget.AI is built and maintained by <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> &mdash; a company building AI-powered tools that help people and businesses save money and make smarter financial decisions.
+            BudgetPlan.AI is built and maintained by <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> &mdash; a company building AI-powered tools that help people and businesses save money and make smarter financial decisions.
           </p>
           <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 20px', background: 'rgba(200,240,96,0.1)', border: '1px solid rgba(200,240,96,0.3)', borderRadius: 8, fontSize: 14, fontWeight: 600, color: 'var(--accent)', textDecoration: 'none' }}>
             Visit CostSaver AI &#8599;
@@ -86,7 +86,7 @@ export default async function AboutPage() {
         <div style={{ background: 'rgba(248,113,113,0.05)', border: '1px solid rgba(248,113,113,0.15)', borderRadius: 12, padding: '20px 22px', marginBottom: 32 }}>
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--error)', marginBottom: 8 }}>Important Disclaimer</div>
           <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7 }}>
-            MyBudget.AI provides AI-generated financial information for educational purposes only. It is not a substitute for professional financial advice. Always consult a licensed financial advisor before making investment or financial decisions. CostSaver AI is not a registered investment advisor.
+            BudgetPlan.AI provides AI-generated financial information for educational purposes only. It is not a substitute for professional financial advice. Always consult a licensed financial advisor before making investment or financial decisions. CostSaver AI is not a registered investment advisor.
           </p>
         </div>
 
