@@ -38,7 +38,7 @@ export async function POST(req: Request) {
         <h3 style="margin-bottom:8px;">Thanks ${name}, we got your message!</h3>
         <p style="color:#71717a;font-size:14px;line-height:1.6;">We'll get back to you within 24 hours. Your subject was: <strong style="color:#e4e4e7;">${subject}</strong></p>
         <hr style="border-color:rgba(255,255,255,0.06);margin:24px 0;"/>
-        <p style="font-size:13px;color:#71717a;">While you wait, explore your dashboard or try our free financial calculators at <a href="https://mybudgetai.pages.dev/calculators" style="color:#c8f060;">mybudgetai.pages.dev/calculators</a></p>
+        <p style="font-size:13px;color:#71717a;">While you wait, explore your dashboard or try our free financial calculators at <a href="https://budgetplanai.com/calculators" style="color:#c8f060;">budgetplanai.com/calculators</a></p>
         <p style="font-size:12px;color:#52525b;margin-top:20px;">CostSaver AI &middot; <a href="https://costsaverai.com" style="color:#52525b;">costsaverai.com</a></p>
       </div>
     `
