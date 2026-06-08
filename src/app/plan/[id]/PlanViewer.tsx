@@ -50,7 +50,7 @@ export default function PlanViewer({ plan, isPaid, isShared }: { plan: any, isPa
     doc.setFillColor(9, 9, 11); doc.rect(0, 0, W, 297, 'F')
     doc.setFillColor(200, 240, 96); doc.rect(0, 0, 4, 297, 'F')
     doc.setTextColor(200, 240, 96); doc.setFontSize(26); doc.setFont('helvetica', 'bold')
-    doc.text('MyBudget.AI', margin, 50)
+    doc.text('BudgetPlan.AI', margin, 50)
     doc.setTextColor(228, 228, 231); doc.setFontSize(16); doc.setFont('helvetica', 'normal')
     doc.text('Personal Financial Plan', margin, 64)
     doc.setFillColor(24, 24, 31); doc.roundedRect(margin, 84, contentW, 70, 4, 4, 'F')
@@ -130,7 +130,7 @@ export default function PlanViewer({ plan, isPaid, isShared }: { plan: any, isPa
       })
     }
 
-    doc.save(`MyBudgetAI-${plan.name || 'Plan'}-${plan.goal?.replace(/\s/g,'-')}.pdf`)
+    doc.save(`BudgetPlanAI-${plan.name || 'Plan'}-${plan.goal?.replace(/\s/g,'-')}.pdf`)
   }
 
   const bars = [

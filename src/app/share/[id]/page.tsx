@@ -22,7 +22,7 @@ export default async function SharePage({ params }: { params: Promise<{ id: stri
       {/* Shared plan banner */}
       <div style={{ background: 'rgba(200,240,96,0.06)', borderBottom: '1px solid rgba(200,240,96,0.15)', padding: '12px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 18, color: 'var(--accent)' }}>MyBudget.AI</span>
+          <span style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 18, color: 'var(--accent)' }}>BudgetPlan.AI</span>
           <span style={{ fontSize: 13, color: 'var(--muted)' }}>· Shared financial plan</span>
         </div>
         <Link href="/signup" style={{ padding: '8px 18px', background: 'var(--accent)', color: '#09090b', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', boxShadow: '0 0 12px rgba(200,240,96,0.3)' }}>
