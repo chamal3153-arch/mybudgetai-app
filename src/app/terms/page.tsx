@@ -1,11 +1,11 @@
-﻿export const runtime = 'edge'
+export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
   title: 'Terms of Service | MyBudget.AI',
-  description: 'Terms of Service for MyBudget.AI â€” rules for using our AI financial planning service.',
+  description: 'Terms of Service for MyBudget.AI - rules for using our AI financial planning service.',
 }
 
 export default async function TermsPage() {
@@ -27,85 +27,39 @@ export default async function TermsPage() {
         {[
           {
             title: '1. Acceptance of Terms',
-            content: `By creating an account or using MyBudget.AI, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the service.
-
-You must be at least 16 years old to use MyBudget.AI.`
+            content: `By creating an account or using MyBudget.AI, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the service.\n\nYou must be at least 16 years old to use MyBudget.AI.`
           },
           {
             title: '2. Not Financial Advice',
-            content: `IMPORTANT: MyBudget.AI provides AI-generated financial information for educational and informational purposes only. Nothing on this platform constitutes:
-â€¢ Financial advice
-â€¢ Investment advice
-â€¢ Tax advice
-â€¢ Legal advice
-â€¢ Accounting advice
-
-Always consult a qualified, licensed financial advisor before making any financial decisions. CostSaver AI and its products are not registered investment advisors.`
+            content: `IMPORTANT: MyBudget.AI provides AI-generated financial information for educational and informational purposes only. Nothing on this platform constitutes:\n• Financial advice\n• Investment advice\n• Tax advice\n• Legal advice\n• Accounting advice\n\nAlways consult a qualified, licensed financial advisor before making any financial decisions. CostSaver AI and its products are not registered investment advisors.`
           },
           {
             title: '3. Your Account',
-            content: `You are responsible for:
-â€¢ Maintaining the confidentiality of your login credentials
-â€¢ All activity that occurs under your account
-â€¢ Providing accurate information when creating your account
-â€¢ Notifying us immediately of any unauthorised use
-
-We reserve the right to suspend or terminate accounts that violate these terms.`
+            content: `You are responsible for:\n• Maintaining the confidentiality of your login credentials\n• All activity that occurs under your account\n• Providing accurate information when creating your account\n• Notifying us immediately of any unauthorised use\n\nWe reserve the right to suspend or terminate accounts that violate these terms.`
           },
           {
             title: '4. Payments & Refunds',
-            content: `MyBudget.AI offers a free tier and a one-time paid full report ($5).
-
-Payment: All payments are processed securely by Stripe. We do not store payment card information.
-
-Refund Policy: Due to the digital and immediate nature of our service (AI-generated plans are delivered instantly), all sales are final. If you experience a technical issue preventing delivery of your plan, contact us within 7 days at support@costsaverai.com for a full refund.`
+            content: `MyBudget.AI offers a free tier and a one-time paid full report ($5).\n\nPayment: All payments are processed securely by Stripe. We do not store payment card information.\n\nRefund Policy: Due to the digital and immediate nature of our service (AI-generated plans are delivered instantly), all sales are final. If you experience a technical issue preventing delivery of your plan, contact us within 7 days at support@costsaverai.com for a full refund.`
           },
           {
             title: '5. Acceptable Use',
-            content: `You agree not to:
-â€¢ Use the service for any unlawful purpose
-â€¢ Attempt to reverse-engineer, scrape, or extract data from our service
-â€¢ Share your account credentials with others
-â€¢ Use the service to harass, harm, or defraud others
-â€¢ Attempt to circumvent payment requirements
-â€¢ Use automated tools to generate plans at scale without permission
-
-Violation of these rules may result in immediate account termination without refund.`
+            content: `You agree not to:\n• Use the service for any unlawful purpose\n• Attempt to reverse-engineer, scrape, or extract data from our service\n• Share your account credentials with others\n• Use the service to harass, harm, or defraud others\n• Attempt to circumvent payment requirements\n• Use automated tools to generate plans at scale without permission\n\nViolation of these rules may result in immediate account termination without refund.`
           },
           {
             title: '6. Intellectual Property',
-            content: `The MyBudget.AI platform, brand, and all associated content are owned by CostSaver AI.
-
-Your financial plans generated by the AI are yours to use for personal purposes. You may not resell, redistribute, or commercially exploit AI-generated plans without written permission.`
+            content: `The MyBudget.AI platform, brand, and all associated content are owned by CostSaver AI.\n\nYour financial plans generated by the AI are yours to use for personal purposes. You may not resell, redistribute, or commercially exploit AI-generated plans without written permission.`
           },
           {
             title: '7. Accuracy of Information',
-            content: `AI-generated financial plans are based on the information you provide. The quality of your plan depends on the accuracy of your inputs. We make no guarantee that:
-â€¢ Plans are accurate, complete, or up-to-date
-â€¢ Investment recommendations will perform as described
-â€¢ Business ideas will be profitable
-â€¢ Goal timelines are achievable
-
-Past performance of investment types mentioned is not indicative of future results.`
+            content: `AI-generated financial plans are based on the information you provide. The quality of your plan depends on the accuracy of your inputs. We make no guarantee that:\n• Plans are accurate, complete, or up-to-date\n• Investment recommendations will perform as described\n• Business ideas will be profitable\n• Goal timelines are achievable\n\nPast performance of investment types mentioned is not indicative of future results.`
           },
           {
             title: '8. Limitation of Liability',
-            content: `To the fullest extent permitted by law, CostSaver AI and MyBudget.AI shall not be liable for:
-â€¢ Any financial losses resulting from actions taken based on our plans
-â€¢ Indirect, incidental, or consequential damages
-â€¢ Loss of data or service interruptions
-â€¢ Third-party service failures (Stripe, Supabase, etc.)
-
-Our total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.`
+            content: `To the fullest extent permitted by law, CostSaver AI and MyBudget.AI shall not be liable for:\n• Any financial losses resulting from actions taken based on our plans\n• Indirect, incidental, or consequential damages\n• Loss of data or service interruptions\n• Third-party service failures (Stripe, Supabase, etc.)\n\nOur total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.`
           },
           {
             title: '9. Service Availability',
-            content: `We aim to provide 99.9% uptime but do not guarantee uninterrupted service. We may:
-â€¢ Modify or discontinue features with notice
-â€¢ Perform scheduled maintenance
-â€¢ Experience unexpected outages
-
-We are not liable for any losses caused by service unavailability.`
+            content: `We aim to provide 99.9% uptime but do not guarantee uninterrupted service. We may:\n• Modify or discontinue features with notice\n• Perform scheduled maintenance\n• Experience unexpected outages\n\nWe are not liable for any losses caused by service unavailability.`
           },
           {
             title: '10. Governing Law',
@@ -135,4 +89,3 @@ We are not liable for any losses caused by service unavailability.`
     </>
   )
 }
-
