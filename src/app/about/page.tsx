@@ -56,13 +56,13 @@ export default async function AboutPage() {
         <div style={{ marginBottom: 48 }}>
           <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 26, letterSpacing: '-0.02em', marginBottom: 20 }}>How BudgetPlan AI works</h2>
           {[
-            { icon: '??', title: 'You answer 8 questions', desc: 'Income, expenses, savings, debt, goal, timeframe, and risk tolerance. Takes about 60 seconds.' },
-            { icon: '??', title: 'AI builds your plan', desc: 'Our AI (powered by DeepSeek) analyses your specific situation, country, and goals to generate a personalised financial plan — not a generic template.' },
-            { icon: '??', title: 'Free insights, immediately', desc: 'Budget breakdown, grocery tip for your country, savings teaser, and an honest insight about your finances — all free, no account needed.' },
-            { icon: '??', title: 'Full report for $5', desc: 'Investment picks specific to your country and risk level, best savings accounts, business ideas, 90-day action plan, goal timeline, and PDF export.' },
+            { icon: '&#128221;', title: 'You answer 8 questions', desc: 'Income, expenses, savings, debt, goal, timeframe, and risk tolerance. Takes about 60 seconds.' },
+            { icon: '&#129302;', title: 'AI builds your plan', desc: 'Our AI (powered by DeepSeek) analyses your specific situation, country, and goals to generate a personalised financial plan - not a generic template.' },
+            { icon: '&#128161;', title: 'Free insights, immediately', desc: 'Budget breakdown, grocery tip for your country, savings teaser, and an honest insight about your finances - all free, no account needed.' },
+            { icon: '&#128196;', title: 'Full report for $5', desc: 'Investment picks specific to your country and risk level, best savings accounts, business ideas, 90-day action plan, goal timeline, and PDF export.' },
           ].map((s, i) => (
             <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 20, padding: '18px 20px', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12 }}>
-              <span style={{ fontSize: 28, flexShrink: 0, marginTop: 2 }}>{s.icon}</span>
+              <span style={{ fontSize: 28, flexShrink: 0, marginTop: 2 }} dangerouslySetInnerHTML={{ __html: s.icon }} />
               <div>
                 <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 5 }}>{s.title}</div>
                 <div style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6 }}>{s.desc}</div>
