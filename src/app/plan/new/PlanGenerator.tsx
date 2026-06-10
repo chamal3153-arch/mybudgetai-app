@@ -21,8 +21,11 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
   const [form, setForm] = useState({ name:'', age:'', country: COUNTRIES[0], income:'', expenses:'', savings:'', debt:'', goal:'', timeframe:'', risk: 5 })
   const [countryQuery, setCountryQuery] = useState('')
   const [showCountryDD, setShowCountryDD] = useState(false)
+  const [countryFocused, setCountryFocused] = useState(false)
 
-  const filteredCountries = countryQuery ? COUNTRIES.filter(c => c.name.toLowerCase().includes(countryQuery.toLowerCase())) : COUNTRIES
+  const filteredCountries = countryQuery.trim()
+    ? COUNTRIES.filter(c => c.name.toLowerCase().includes(countryQuery.toLowerCase()) || c.code.toLowerCase().includes(countryQuery.toLowerCase()))
+    : COUNTRIES
 
   async function generate() {
     if (!form.name || !form.age || !form.income || !form.goal || !form.timeframe) {
@@ -73,11 +76,19 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
         <Field label="Country *">
           <div style={{ position: 'relative' }}>
             <span style={{ position:'absolute',left:14,top:'50%',transform:'translateY(-50%)',fontSize:18,pointerEvents:'none' }}>{form.country.flag}</span>
-            <input value={countryQuery || form.country.name} onChange={e=>{setCountryQuery(e.target.value);setShowCountryDD(true)}} onFocus={()=>setShowCountryDD(true)} style={{...inp, paddingLeft:44}} placeholder="Search country..." />
+            <input
+              value={countryFocused ? countryQuery : form.country.name}
+              onChange={e => { setCountryQuery(e.target.value); setShowCountryDD(true) }}
+              onFocus={() => { setCountryFocused(true); setCountryQuery(''); setShowCountryDD(true) }}
+              onBlur={() => { setTimeout(() => { setShowCountryDD(false); setCountryFocused(false); setCountryQuery('') }, 200) }}
+              style={{...inp, paddingLeft:44}}
+              placeholder="Search country..."
+              autoComplete="off"
+            />
             {showCountryDD && filteredCountries.length > 0 && (
-              <div style={{ position:'absolute',top:'calc(100% + 6px)',left:0,right:0,background:'var(--surface-el)',border:'1px solid var(--border)',borderRadius:10,maxHeight:220,overflowY:'auto',zIndex:200 }}>
-                {filteredCountries.slice(0,30).map(c=>(
-                  <div key={c.name} onClick={()=>{setForm({...form,country:c});setCountryQuery('');setShowCountryDD(false)}} style={{ padding:'10px 14px',cursor:'pointer',display:'flex',alignItems:'center',gap:10,fontSize:14 }}>
+              <div style={{ position:'absolute',top:'calc(100% + 6px)',left:0,right:0,background:'var(--surface)',border:'1px solid var(--border)',borderRadius:10,maxHeight:220,overflowY:'auto',zIndex:200,boxShadow:'0 8px 24px rgba(0,0,0,0.3)' }}>
+                {filteredCountries.slice(0,50).map(c=>(
+                  <div key={c.name} onMouseDown={e=>e.preventDefault()} onClick={()=>{setForm({...form,country:c});setCountryQuery('');setShowCountryDD(false);setCountryFocused(false)}} style={{ padding:'10px 14px',cursor:'pointer',display:'flex',alignItems:'center',gap:10,fontSize:14 }}>
                     <span>{c.flag}</span><span style={{color:'var(--body)'}}>{c.name}</span><span style={{marginLeft:'auto',color:'var(--muted)',fontSize:12}}>{c.code}</span>
                   </div>
                 ))}
@@ -127,10 +138,10 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
       </section>
 
       <section style={{ ...section, marginTop: 24 }}>
-        <div style={sectionLabel}>Risk tolerance — {form.risk}/10</div>
+        <div style={sectionLabel}>Risk tolerance ï¿½ {form.risk}/10</div>
         <input type="range" min={1} max={10} value={form.risk} onChange={e=>setForm({...form,risk:Number(e.target.value)})} style={{ width:'100%',accentColor:'var(--accent)',marginBottom:6 }} />
         <div style={{ display:'flex',justifyContent:'space-between',fontSize:12,color:'var(--muted)' }}>
-          <span>1 — Play it safe</span><span>5 — Balanced</span><span>10 — Go aggressive</span>
+          <span>1 ï¿½ Play it safe</span><span>5 ï¿½ Balanced</span><span>10 ï¿½ Go aggressive</span>
         </div>
       </section>
 
@@ -138,7 +149,7 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
         <button onClick={generate} style={{ width:'100%',padding:'18px',background:'var(--accent)',color:'#09090b',border:'none',borderRadius:12,fontSize:16,fontWeight:700,cursor:'pointer',fontFamily:'inherit' }}>
           Generate my plan ?
         </button>
-        <p style={{ textAlign:'center',marginTop:12,fontSize:13,color:'var(--muted)' }}>Takes ~15 seconds · Free insights always included</p>
+        <p style={{ textAlign:'center',marginTop:12,fontSize:13,color:'var(--muted)' }}>Takes ~15 seconds ï¿½ Free insights always included</p>
       </div>
     </div>
   )
