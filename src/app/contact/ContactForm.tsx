@@ -26,7 +26,7 @@ export default function ContactForm({ userEmail }: { userEmail?: string }) {
   return (
     <form onSubmit={submit} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 14, padding: '28px 24px' }}>
       <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 20, marginBottom: 22 }}>Send us a message</h2>
-      {status === 'error' && <div style={{ background: 'rgba(248,113,113,0.08)', border: '1px solid rgba(248,113,113,0.2)', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--error)', marginBottom: 16 }}>Something went wrong. Email us directly at support@costsaverai.com</div>}
+      {status === 'error' && <div style={{ background: 'rgba(248,113,113,0.08)', border: '1px solid rgba(248,113,113,0.2)', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--error)', marginBottom: 16 }}>Something went wrong. Email us directly at costsaverai@proton.me</div>}
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
         <div><label style={lbl}>Your name</label><input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})} placeholder="Alex" style={inp} /></div>

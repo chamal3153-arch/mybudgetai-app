@@ -39,7 +39,7 @@ export default function SignupPage() {
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
           <Link href="/" style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 22, color: 'var(--accent)', textDecoration: 'none' }}>BudgetPlan AI</Link>
           <h1 style={{ fontSize: 24, fontWeight: 600, marginTop: 20, marginBottom: 6 }}>Create your account</h1>
-          <p style={{ color: 'var(--muted)', fontSize: 14 }}>Free to start · Full report $5</p>
+          <p style={{ color: 'var(--muted)', fontSize: 14 }}>Get your personalized financial plan in 60 seconds</p>
         </div>
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 16, padding: 28 }}>
           {error && <div style={{ background: 'rgba(248,113,113,0.08)', border: '1px solid rgba(248,113,113,0.2)', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--error)', marginBottom: 16 }}>{error}</div>}

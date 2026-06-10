@@ -5,7 +5,7 @@ import ContactForm from './ContactForm'
 
 export const metadata = {
   title: 'Contact Us | BudgetPlan AI',
-  description: 'Get in touch with the BudgetPlan AI team. We are here to help with any questions about your financial plan.',
+  description: 'Get in touch with the BudgetPlan AI team.',
 }
 
 export default async function ContactPage() {
@@ -18,24 +18,18 @@ export default async function ContactPage() {
         <div style={{ marginBottom: 36 }}>
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 36, letterSpacing: '-0.02em', marginBottom: 10 }}>Contact Us</h1>
           <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.7 }}>
-            Questions about your plan, billing, or the product? We&apos;re here to help.
-            BudgetPlan AI is a product of <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>CostSaver AI</a>.
+            Questions about your plan, billing, or the product? Email us directly at{' '}
+            <a href="mailto:costsaverai@proton.me" style={{ color: 'var(--accent)', textDecoration: 'none' }}>costsaverai@proton.me</a>{' '}
+            or use the form below.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 36 }}>
-          {[
-            { icon: '??', title: 'General support', email: 'support@costsaverai.com' },
-            { icon: '??', title: 'Billing & refunds', email: 'billing@costsaverai.com' },
-            { icon: '??', title: 'Privacy concerns', email: 'privacy@costsaverai.com' },
-            { icon: '??', title: 'Partnerships', email: 'hello@costsaverai.com' },
-          ].map(c => (
-            <div key={c.title} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12, padding: '18px 16px' }}>
-              <div style={{ fontSize: 22, marginBottom: 8 }}>{c.icon}</div>
-              <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>{c.title}</div>
-              <a href={`mailto:${c.email}`} style={{ fontSize: 13, color: 'var(--accent)', textDecoration: 'none' }}>{c.email}</a>
-            </div>
-          ))}
+        <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 12, padding: '18px 20px', marginBottom: 32, display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ fontSize: 24 }}>&#9993;</div>
+          <div>
+            <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 2 }}>Email us directly</div>
+            <a href="mailto:costsaverai@proton.me" style={{ fontSize: 14, color: 'var(--accent)', textDecoration: 'none' }}>costsaverai@proton.me</a>
+          </div>
         </div>
 
         <ContactForm userEmail={user?.email} />

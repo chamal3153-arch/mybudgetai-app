@@ -18,11 +18,6 @@ export default async function LandingPage() {
           <a href="https://costsaverai.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--muted)', textDecoration: 'none', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: 100, marginBottom: 40, background: 'var(--surface)' }}>
             A <strong style={{ color: 'var(--body)' }}>CostSaver AI</strong> product &nbsp;&#8599;
           </a>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 36, flexWrap: 'wrap' }}>
-            <span style={{ fontSize: 13, color: 'var(--muted)' }}><span style={{ color: '#f0c060' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 / 5</span>
-            <span style={{ fontSize: 13, color: 'var(--muted)' }}>&#128100; 12,000+ plans generated</span>
-            <span style={{ fontSize: 13, color: 'var(--muted)' }}>&#127758; 195 countries</span>
-          </div>
           <h1 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(38px,8vw,62px)', lineHeight: 1.08, letterSpacing: '-0.03em', marginBottom: 22 }}>
             Your money,<br /><em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>finally making sense.</em>
           </h1>
@@ -37,7 +32,6 @@ export default async function LandingPage() {
               &#129518; Free Calculators
             </Link>
           </div>
-          <p style={{ marginTop: 14, fontSize: 13, color: 'var(--muted)' }}>Free to start &middot; <strong style={{ color: 'var(--body)' }}>Full report $5</strong> &middot; No credit card needed</p>
 
           {/* Features */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: 18, flexWrap: 'wrap', marginTop: 40, paddingTop: 28, borderTop: '1px solid var(--border)', fontSize: 13, color: 'var(--muted)' }}>
@@ -71,8 +65,7 @@ export default async function LandingPage() {
       {/* Testimonials */}
       <section style={{ padding: '60px 20px', borderTop: '1px solid var(--border)', background: 'var(--surface)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(26px,5vw,38px)', letterSpacing: '-0.02em', marginBottom: 10, textAlign: 'center' }}>What people are saying</h2>
-          <p style={{ color: 'var(--muted)', fontSize: 15, marginBottom: 48, textAlign: 'center' }}>Join 12,000+ people who got their financial plan</p>
+          <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(26px,5vw,38px)', letterSpacing: '-0.02em', marginBottom: 48, textAlign: 'center' }}>What people are saying</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {[
               { name: 'Sarah M.', country: 'United States', rating: 5, text: "I finally understand where my money goes. The 90-day plan is incredibly specific - it tells you exactly what to do each month. Worth every cent." },
@@ -110,7 +103,7 @@ export default async function LandingPage() {
       <section style={{ padding: '80px 20px', borderTop: '1px solid var(--border)', textAlign: 'center', background: 'var(--surface)' }}>
         <div style={{ maxWidth: 500, margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(28px,6vw,44px)', letterSpacing: '-0.02em', marginBottom: 14 }}>Start building wealth today.</h2>
-          <p style={{ color: 'var(--muted)', fontSize: 15, marginBottom: 32 }}>Free to start. No credit card. Works in 195 countries.</p>
+          <p style={{ color: 'var(--muted)', fontSize: 15, marginBottom: 32 }}>Free to start. No credit card required.</p>
           <Link href="/signup" style={{ display: 'inline-flex', padding: '18px 44px', background: 'var(--accent)', color: '#09090b', borderRadius: 12, fontSize: 17, fontWeight: 700, textDecoration: 'none', boxShadow: '0 0 30px rgba(200,240,96,0.3)' }}>
             Build my free plan &rarr;
           </Link>
