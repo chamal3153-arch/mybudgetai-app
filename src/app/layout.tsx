@@ -11,8 +11,8 @@ const dmSerif = DM_Serif_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'BudgetPlan AI — Free AI Budget Planner | 195 Countries',
-  description: 'Free AI budget planner. Get a personalized financial plan in 60 seconds — budget breakdown, investment picks, savings strategy & 90-day action plan. Works in 195 countries.',
+  title: 'BudgetPlan AI - Free AI Budget Planner | 195 Countries',
+  description: 'Free AI budget planner. Get a personalized financial plan in 60 seconds - budget breakdown, investment picks, savings strategy & 90-day action plan. Works in 195 countries.',
   manifest: '/manifest.json',
   metadataBase: new URL('https://budgetplanai.com'),
   keywords: ['AI budget planner', 'free budget planner', 'AI financial planner', 'personal finance AI', 'budget plan AI', 'financial planning tool'],
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://budgetplanai.com',
-    title: 'BudgetPlan AI — Free AI Budget Planner',
+    title: 'BudgetPlan AI - Free AI Budget Planner',
     description: 'Get a personalized AI financial plan in 60 seconds. Budget breakdown, investment picks & 90-day action plan. Free to start. Works in 195 countries.',
     siteName: 'BudgetPlan AI',
     images: [{ url: 'https://budgetplanai.com/og-image.png', width: 1200, height: 630, alt: 'BudgetPlan AI - AI Budget Planner' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BudgetPlan AI — Free AI Budget Planner',
+    title: 'BudgetPlan AI - Free AI Budget Planner',
     description: 'Get a personalized AI financial plan in 60 seconds. Free to start. Works in 195 countries.',
     images: ['https://budgetplanai.com/og-image.png'],
   },
