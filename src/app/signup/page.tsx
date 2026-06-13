@@ -10,6 +10,7 @@ export default function SignupPage() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [googleLoading, setGoogleLoading] = useState(false)
+  const [checkEmail, setCheckEmail] = useState(false)
   const router = useRouter()
 
   async function handleSignup(e: React.FormEvent) {
@@ -32,11 +33,9 @@ export default function SignupPage() {
       router.refresh()
       router.push('/plan/new')
     } else {
-      // Confirmation email sent
-      setError('')
+      // Confirmation email sent — show inline (email state preserved)
       setLoading(false)
-      // Show inline message
-      router.push('/signup?check-email=1')
+      setCheckEmail(true)
     }
   }
 
@@ -48,9 +47,6 @@ export default function SignupPage() {
       options: { redirectTo: `${window.location.origin}/auth/callback` }
     })
   }
-
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null
-  const checkEmail = params?.get('check-email')
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>

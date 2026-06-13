@@ -4,10 +4,16 @@ import { useRouter } from 'next/navigation'
 import { COUNTRIES } from '@/lib/countries'
 
 const GOALS = [
-  {id:'Emergency Fund',emoji:'???'},{id:'Grow Wealth',emoji:'??'},{id:'Buy a Home',emoji:'??'},
-  {id:'Pay Off Debt',emoji:'??'},{id:'Retire Early',emoji:'??'},{id:'Start a Business',emoji:'??'},
-  {id:'Travel & Experiences',emoji:'??'},{id:'Kids & Family',emoji:'????????'},{id:'Education',emoji:'??'},
-  {id:'Reach Income Target',emoji:'??'},
+  { id: 'Emergency Fund', emoji: '&#128170;' },
+  { id: 'Grow Wealth', emoji: '&#128200;' },
+  { id: 'Buy a Home', emoji: '&#127968;' },
+  { id: 'Pay Off Debt', emoji: '&#128179;' },
+  { id: 'Retire Early', emoji: '&#127958;' },
+  { id: 'Start a Business', emoji: '&#128640;' },
+  { id: 'Travel & Experiences', emoji: '&#9992;&#65039;' },
+  { id: 'Kids & Family', emoji: '&#128106;' },
+  { id: 'Education', emoji: '&#127979;' },
+  { id: 'Reach Income Target', emoji: '&#127919;' },
 ]
 
 const TIMEFRAMES = ['6 months','1 year','2 years','3 years','5 years','10 years','20+ years']
@@ -45,7 +51,7 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
       if (!res.ok) throw new Error('Generation failed')
       const { planId } = await res.json()
       router.push(`/plan/${planId}`)
-    } catch (e) {
+    } catch {
       clearInterval(interval)
       setError('Generation failed. Please try again.')
       setStep('form')
@@ -117,7 +123,7 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
         <div style={{ display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10 }}>
           {GOALS.map(g=>(
             <div key={g.id} onClick={()=>setForm({...form,goal:g.id})} style={{ background: form.goal===g.id ? 'rgba(200,240,96,0.06)' : 'var(--surface)', border: `1px solid ${form.goal===g.id ? 'var(--accent)' : 'var(--border)'}`, borderRadius:10,padding:'16px 10px',cursor:'pointer',textAlign:'center' }}>
-              <div style={{fontSize:24,marginBottom:6}}>{g.emoji}</div>
+              <div style={{fontSize:24,marginBottom:6}} dangerouslySetInnerHTML={{ __html: g.emoji }} />
               <div style={{fontSize:12,fontWeight:500}}>{g.id}</div>
             </div>
           ))}
@@ -138,18 +144,18 @@ export default function PlanGenerator({ userId, isPaid }: { userId: string, isPa
       </section>
 
       <section style={{ ...section, marginTop: 24 }}>
-        <div style={sectionLabel}>Risk tolerance � {form.risk}/10</div>
+        <div style={sectionLabel}>Risk tolerance &mdash; {form.risk}/10</div>
         <input type="range" min={1} max={10} value={form.risk} onChange={e=>setForm({...form,risk:Number(e.target.value)})} style={{ width:'100%',accentColor:'var(--accent)',marginBottom:6 }} />
         <div style={{ display:'flex',justifyContent:'space-between',fontSize:12,color:'var(--muted)' }}>
-          <span>1 � Play it safe</span><span>5 � Balanced</span><span>10 � Go aggressive</span>
+          <span>1 &mdash; Play it safe</span><span>5 &mdash; Balanced</span><span>10 &mdash; Go aggressive</span>
         </div>
       </section>
 
       <div style={{ marginTop: 32 }}>
         <button onClick={generate} style={{ width:'100%',padding:'18px',background:'var(--accent)',color:'#09090b',border:'none',borderRadius:12,fontSize:16,fontWeight:700,cursor:'pointer',fontFamily:'inherit' }}>
-          Generate my plan ?
+          Generate my plan &rarr;
         </button>
-        <p style={{ textAlign:'center',marginTop:12,fontSize:13,color:'var(--muted)' }}>Takes ~15 seconds � Free insights always included</p>
+        <p style={{ textAlign:'center',marginTop:12,fontSize:13,color:'var(--muted)' }}>Takes ~15 seconds &mdash; Free insights always included</p>
       </div>
     </div>
   )

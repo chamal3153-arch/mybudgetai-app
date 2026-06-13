@@ -13,7 +13,7 @@ async function callDeepSeek(prompt: string, maxTokens: number) {
     body: JSON.stringify({
       model: MODEL, max_tokens: maxTokens, temperature: 0.7,
       messages: [
-        { role: 'system', content: 'You are a world-class financial advisor. Always respond with valid JSON only â€” no markdown, no explanation.' },
+        { role: 'system', content: 'You are a world-class financial advisor. Always respond with valid JSON only - no markdown, no explanation.' },
         { role: 'user', content: prompt }
       ]
     })

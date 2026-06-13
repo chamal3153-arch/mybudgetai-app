@@ -2,6 +2,7 @@ export const runtime = 'edge'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import { POSTS } from '@/lib/blog'
 
 export default async function LandingPage() {
   const supabase = await createClient()
@@ -99,6 +100,28 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      {/* Blog preview */}
+      <section style={{ padding: '60px 20px', borderTop: '1px solid var(--border)' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 36, flexWrap: 'wrap', gap: 10 }}>
+            <div>
+              <h2 style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 'clamp(24px,4vw,34px)', letterSpacing: '-0.02em', marginBottom: 6 }}>Personal finance guides</h2>
+              <p style={{ color: 'var(--muted)', fontSize: 14 }}>Free money advice that works in any country</p>
+            </div>
+            <Link href="/blog" style={{ fontSize: 14, color: 'var(--accent)', textDecoration: 'none', fontWeight: 500 }}>All articles &rarr;</Link>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(240px,1fr))', gap: 14 }}>
+            {POSTS.slice(-3).reverse().map(post => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 18px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ fontSize: 32 }} dangerouslySetInnerHTML={{ __html: post.cover }} />
+                <div style={{ fontFamily: 'var(--font-serif,serif)', fontSize: 15, color: 'var(--body)', lineHeight: 1.4 }}>{post.title}</div>
+                <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 'auto' }}>{post.readTime}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section style={{ padding: '80px 20px', borderTop: '1px solid var(--border)', textAlign: 'center', background: 'var(--surface)' }}>
         <div style={{ maxWidth: 500, margin: '0 auto' }}>
@@ -124,7 +147,7 @@ export default async function LandingPage() {
             </div>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Product</div>
-              {[['/', 'Home'], ['/plan/new', 'New Plan'], ['/calculators', 'Calculators'], ['/about', 'About']].map(([href, label]) => (
+              {[['/', 'Home'], ['/plan/new', 'New Plan'], ['/calculators', 'Calculators'], ['/blog', 'Blog'], ['/about', 'About']].map(([href, label]) => (
                 <div key={href} style={{ marginBottom: 8 }}><Link href={href} style={{ fontSize: 13, color: 'var(--muted)', textDecoration: 'none' }}>{label}</Link></div>
               ))}
             </div>

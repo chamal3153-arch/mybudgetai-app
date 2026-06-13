@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
-import { LayoutDashboard, Settings, LogOut, Plus, Calculator } from 'lucide-react'
+import { LayoutDashboard, Settings, LogOut, Plus, Calculator, BookOpen } from 'lucide-react'
 
 export default function Navbar({ user }: { user: { email?: string } | null }) {
   const pathname = usePathname()
@@ -122,6 +122,9 @@ export default function Navbar({ user }: { user: { email?: string } | null }) {
               <Link href="/calculators" className={`nav-link${pathname === '/calculators' ? ' active' : ''}`}>
                 <Calculator size={15} /> Calculators
               </Link>
+              <Link href="/blog" className={`nav-link${pathname.startsWith('/blog') ? ' active' : ''}`}>
+                <BookOpen size={15} /> Blog
+              </Link>
               <Link href="/settings" className={`nav-link${pathname === '/settings' ? ' active' : ''}`}>
                 <Settings size={15} /> Settings
               </Link>
@@ -133,7 +136,8 @@ export default function Navbar({ user }: { user: { email?: string } | null }) {
 
           {/* Logged out nav */}
           {!user && (
-            <div style={{ display: 'flex', gap: 8 }}>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+              <Link href="/blog" className={`nav-link${pathname.startsWith('/blog') ? ' active' : ''}`}>Blog</Link>
               <Link href="/login" className="nav-link">Sign in</Link>
               <Link href="/signup" className="nav-new">Get started</Link>
             </div>

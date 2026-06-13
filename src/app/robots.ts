@@ -1,5 +1,4 @@
-export const runtime = 'edge'
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,10 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/dashboard', '/settings', '/api/'],
+        disallow: ['/dashboard', '/plan/', '/settings', '/api/'],
       },
     ],
     sitemap: 'https://budgetplanai.com/sitemap.xml',
-    host: 'https://budgetplanai.com',
   }
 }
