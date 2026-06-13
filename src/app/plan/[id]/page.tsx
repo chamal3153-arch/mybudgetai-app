@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect, notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import PlanViewer from './PlanViewer'
+import PlanChat from './PlanChat'
 
 export default async function PlanPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -19,6 +20,7 @@ export default async function PlanPage({ params }: { params: Promise<{ id: strin
     <>
       <Navbar user={user} />
       <PlanViewer plan={plan} isPaid={!!purchase} />
+      <PlanChat planId={plan.id} />
     </>
   )
 }
