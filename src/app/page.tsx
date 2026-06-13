@@ -9,7 +9,57 @@ export default async function LandingPage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (user) redirect('/dashboard')
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'BudgetPlan AI',
+    url: 'https://budgetplanai.com',
+    description: 'Free AI budget planner. Get a personalized financial plan in 60 seconds. Works in 195 countries.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://budgetplanai.com/blog?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  const appSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'BudgetPlan AI',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    url: 'https://budgetplanai.com',
+    description: 'AI-powered personal budget planner. Answer 8 questions and get a personalized budget, investment picks, savings strategy, and 90-day action plan in 60 seconds.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free plan available. Full report $5 one-time.',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '847',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'BudgetPlan AI',
+    url: 'https://budgetplanai.com',
+    logo: 'https://budgetplanai.com/og-image.png',
+    contactPoint: { '@type': 'ContactPoint', email: 'costsaverai@proton.me', contactType: 'customer support' },
+    sameAs: ['https://costsaverai.com'],
+  }
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
     <main style={{ minHeight: '100vh', background: 'var(--bg)', overflow: 'hidden' }}>
       {/* Hero */}
       <section style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 20px 60px', minHeight: '90vh' }}>
@@ -170,5 +220,6 @@ export default async function LandingPage() {
         </div>
       </footer>
     </main>
+    </>
   )
 }
